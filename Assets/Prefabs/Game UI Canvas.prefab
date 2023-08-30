@@ -198,6 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900651082}
   - component: {fileID: 7612546048776168648}
+  - component: {fileID: 434112815713169980}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -244,6 +245,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &434112815713169980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900651081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bad2bc16658fc347b04470c9bb3b19e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenParent: {fileID: 35599912}
+  scoreParent: {fileID: 8504733637944322412}
+  loseText: {fileID: 1998300372988537387}
+  scoreText: {fileID: 8504733637849101980}
+  stars:
+  - {fileID: 8504733639234729474}
+  - {fileID: 8504733639439843248}
+  - {fileID: 8504733638453943294}
+  - {fileID: 8504733639431468154}
 --- !u!1 &1006351522
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +802,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5408554704871872394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 434112815713169980}
+        m_MethodName: OnReplayClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5977220926651076307
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +932,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7743976464256608223}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 434112815713169980}
+        m_MethodName: OnDoneClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6981151421645916203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 0}
+  gameOver: {fileID: 434112815713169980}
   remainingText: {fileID: 8504733639896079370}
   remainingSubText: {fileID: 8504733637947969738}
   targetText: {fileID: 8504733639608038439}
